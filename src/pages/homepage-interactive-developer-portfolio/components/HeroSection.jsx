@@ -50,7 +50,7 @@ const HeroSection = () => {
   }, [displayText, isTyping, currentTaglineIndex, taglines]);
 
   return (
-    <div className="bg-[#27313e] min-h-screen flex items-center justify-center relative overflow-hidden pt-16 pb-16">
+    <div className="bg-[#27313e] min-h-screen flex items-center justify-center relative overflow-hidden pt-24 pb-16">
       {/* Background Grid */}
       <div className="absolute inset-0 bg-grid-pattern opacity-5 z-[-1]"></div>
       
