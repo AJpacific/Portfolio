@@ -75,7 +75,7 @@ const ProjectShowcase = () => {
     : projects.filter(p => p.category === activeCategory);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="max-w-7xl mx-auto px-4">
       {/* Title */}
       <motion.div
         initial="hidden"
@@ -98,22 +98,22 @@ const ProjectShowcase = () => {
 
       {/* Category Filter */}
       <div className="flex justify-center mb-8">
-        <div className="flex space-x-2 bg-dark-surface/50 rounded-lg p-2 border border-primary/20">
-          {categories.map(cat => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-2 rounded-lg font-mono text-sm transition-all duration-300 ${
-                activeCategory === cat
-                  ? 'bg-primary text-white shadow-cyber'
-                  : 'text-text-muted hover:text-cyber-green hover:bg-primary/10'
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-      </div>
+  <div className="flex flex-wrap justify-center space-x-2 bg-dark-surface/50 rounded-lg p-2 border border-primary/20 w-full">
+    {categories.map(cat => (
+      <button
+        key={cat}
+        onClick={() => setActiveCategory(cat)}
+        className={`px-4 py-2 rounded-lg font-mono text-sm transition-all duration-300 ${
+          activeCategory === cat
+            ? 'bg-primary text-white shadow-cyber'
+            : 'text-text-muted hover:text-cyber-green hover:bg-primary/10'
+        }`}
+      >
+        {cat}
+      </button>
+    ))}
+  </div>
+</div>
 
       {/* Projects Grid */}
       <motion.div
