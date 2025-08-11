@@ -1,7 +1,8 @@
 {
-  "name": "ashutosh_portfolio",
+  "name": "aj_portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://AJpacific.github.io/Portfolio",
   "dependencies": {
     "@dhiwise/component-tagger": "^1.0.9",
     "@reduxjs/toolkit": "^2.6.1",
@@ -41,7 +42,10 @@
   "scripts": {
     "start": "vite",
     "build": "vite build --sourcemap",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+
   },
   "eslintConfig": {
     "extends": [
