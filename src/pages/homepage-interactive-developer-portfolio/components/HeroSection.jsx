@@ -153,7 +153,7 @@ const HeroSection = () => {
             <div className="relative">
               <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-primary shadow-cyber">
                 <Image
-                  src="public/assets/images/pfp.jpg"
+                  src="/Portfolio/assets/images/pfp.jpg"
                   alt="Ashutosh Jha"
                   className="w-full h-full object-cover"
                 />
