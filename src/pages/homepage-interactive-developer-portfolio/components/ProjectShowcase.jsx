@@ -10,13 +10,60 @@ const ProjectShowcase = () => {
       id: 1,
       title: "E-Commerce Platform Backend",
       category: "Backend Development",
-      description: `Built a secure, high-performance e-commerce backend with Spring Boot, Spring Security, and Spring Data JPA. Implemented user authentication with encrypted passwords, role-based authorization, product catalog management, order processing, and optimized SQL queries for fast and reliable operations.`,
-      technologies: ["Spring Boot", "Spring Security", "Spring Data JPA", "MySQL", "JWT", "Encryption"],
-      securityFeatures: ["Multi-Factor Authentication", "End-to-End Encryption", "OWASP Compliance"],
-      githubUrl: "https://github.com/AJpacific/E-Commerce-Backend",
+      description: `Developed a production-ready REST API for modern e-commerce platforms using Spring Boot 3 and Java 21. Implemented secure JWT-based authentication, role-based access control (Admin, Manager, Customer), and password encryption with BCrypt. Features include user management, product CRUD, shopping cart, orders, payments, inventory management, and robust API security.`,
+      technologies: [
+        "Spring Boot",
+        "Java",
+        "Spring Security",
+        "Spring Data JPA",
+        "MySQL",
+        "Hibernate",
+        "JWT",
+        "BCrypt",
+        "Maven",
+        "REST API Design"
+      ],
+      securityFeatures: [
+        "JWT Authentication",
+        "Role-Based Access Control",
+        "BCrypt Password Hashing",
+        "Input Validation",
+        "Error Handling",
+        "CSRF Protection Disabled for API",
+        "Stateless Sessions"
+      ],
+      githubUrl: "https://github.com/AJpacific/E-Commerce-Backend"
     },
+
     {
       id: 2,
+      title: "LMS Backend",
+      category: "Backend Development",
+      description: `Developed a comprehensive Learning Management System (LMS) using Spring Boot and Java. Implemented JWT-based authentication, role-based access control (Student, Instructor, Approver), and a secure REST API architecture. Features include user management, course creation/approval, enrollments, progress tracking, and file upload for course materials.`,
+      technologies: [
+        "Java",
+        "Spring Boot",
+        "Spring Security",
+        "Spring Data JPA",
+        "MySQL",
+        "H2 Database",
+        "Hibernate",
+        "JWT",
+        "BCrypt",
+        "SpringDoc OpenAPI",
+        "JUnit 5"
+      ],
+      securityFeatures: [
+        "JWT Authentication",
+        "Role-Based Access Control",
+        "Password Encryption (BCrypt)",
+        "CORS Configuration",
+        "Secure REST API Endpoints"
+      ],
+      githubUrl: "https://github.com/AJpacific/LMS-Backend"
+    },
+    {
+      id: 3,
       title: "Network Vulnerability Scanner",
       category: "Cybersecurity",
       description: `A Python-based network vulnerability scanner that detects open TCP ports, identifies running services, and checks for known vulnerabilities.`,
@@ -25,7 +72,7 @@ const ProjectShowcase = () => {
       githubUrl: "https://github.com/AJpacific/Network-Vulnerability-Scanner"
     },
     {
-      id: 3,
+      id: 4,
       title: "WiFi DoS",
       category: "Cybersecurity",
       description: `A Python-based wireless network analysis and deauthentication (DoS) tool leveraging the Aircrack-ng suite. It scans nearby WiFi networks, lists them in real-time, and allows controlled deauth attacks on selected targets. Designed purely for educational use to demonstrate wireless security concepts in authorized environments.`,
@@ -48,14 +95,14 @@ const ProjectShowcase = () => {
       githubUrl: "https://github.com/AJpacific/DoS-WiFi"
     },
     {
-      id: 4,
+      id: 5,
       title: "HomeBite – Food Delivery Web App",
       category: "Frontend Development",
-      description: `A responsive React + Tailwind CSS food delivery web app showcasing a variety of pizzas with real-time ratings and cart management.`,
-      technologies: ["React", "Tailwind CSS", "JavaScript", "HTML", "CSS"],
+      description: `A dynamic and responsive food delivery web application built using HTML, CSS, and JavaScript.`,
+      technologies: ["JavaScript", "HTML", "CSS"],
       securityFeatures: ["HTTPS", "Form Validation", "Input Sanitization", "Secure Storage (Local/Session)"],
       githubUrl: "https://github.com/AJpacific/HomeBite",
-    }
+    }  
   ];
 
   const categories = ["All", ...new Set(projects.map(p => p.category))];
