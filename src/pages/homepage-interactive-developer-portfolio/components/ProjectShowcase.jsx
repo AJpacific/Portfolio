@@ -11,9 +11,9 @@ const ProjectShowcase = () => {
       title: "E-Commerce Platform Backend",
       category: "Backend Development",
       description: `Built a secure, high-performance e-commerce backend with Spring Boot, Spring Security, and Spring Data JPA. Implemented user authentication with encrypted passwords, role-based authorization, product catalog management, order processing, and optimized SQL queries for fast and reliable operations.`,
-      technologies: ["Spring Boot", "Spring Security", "Spring Data JPA", "PostgreSQL", "JWT", "Encryption"],
+      technologies: ["Spring Boot", "Spring Security", "Spring Data JPA", "MySQL", "JWT", "Encryption"],
       securityFeatures: ["Multi-Factor Authentication", "End-to-End Encryption", "OWASP Compliance"],
-      githubUrl: "https://github.com/AJpacific/E-Commerce",
+      githubUrl: "https://github.com/AJpacific/E-Commerce-Backend",
     },
     {
       id: 2,
