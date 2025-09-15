@@ -458,25 +458,25 @@ $$ LANGUAGE plpgsql SECURITY DEFINER;`
  * It's a pure component that receives the active skill object as a prop.
  */
 const CodePreview = ({ skill }) => (
-  <div className="bg-gray-800/50 rounded-lg border border-teal-500/20 overflow-hidden shadow-lg mt-4 backdrop-blur-sm">
+  <div className="bg-dark-surface/50 rounded-lg border border-primary/20 overflow-hidden shadow-medium mt-4 backdrop-blur-sm">
     {/* Code Editor Header */}
-    <div className="flex items-center justify-between px-4 py-2 bg-gray-900/70 border-b border-teal-500/20">
+    <div className="flex items-center justify-between px-4 py-2 bg-dark-bg border-b border-primary/20">
       <div className="flex items-center space-x-2">
         <div className="w-3 h-3 bg-red-500 rounded-full"></div>
         <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
         <div className="w-3 h-3 bg-green-500 rounded-full"></div>
       </div>
-      <div className="text-gray-400 text-xs font-mono">
+      <div className="text-text-muted text-xs font-mono">
         {skill.name.toLowerCase().replace(' ', '_')}_demo
       </div>
       <div className="flex items-center">
-        <Icon name="Play" size={16} className="text-teal-400" />
+        <Icon name="Play" size={16} className="text-cyber-green" />
       </div>
     </div>
 
     {/* Code Content */}
     <div className="p-4 font-mono text-sm overflow-x-auto">
-      <pre className="text-gray-200 whitespace-pre-wrap">
+      <pre className="text-text-light whitespace-pre-wrap">
         <code>{skill.code}</code>
       </pre>
     </div>
@@ -490,7 +490,7 @@ const CodePreview = ({ skill }) => (
  */
 const SkillsLaboratory = () => {
   // 'java' is the default open skill, can be set to null for all to be closed initially.
-  const [activeSkill, setActiveSkill] = useState('null'); 
+  const [activeSkill, setActiveSkill] = useState(null); 
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -507,7 +507,7 @@ const SkillsLaboratory = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
+      <div className="mx-auto">
         {/* Header Section */}
         <motion.div
           initial="hidden"
@@ -516,13 +516,13 @@ const SkillsLaboratory = () => {
           variants={containerVariants}
           className="text-center mb-12"
         >
-          <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-bold text-gray-100 mb-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-text-light mb-6">
-            <span className="text-cyber-green font-mono">&lt;</span>
-            Skills Laboratory
-            <span className="text-cyber-green font-mono">/&gt;</span>
-          </h2>
-          </motion.h2>
+          <motion.div variants={itemVariants}>
+            <h2 className="text-4xl md:text-5xl font-bold text-text-light mb-6">
+              <span className="text-cyber-green font-mono">&lt;</span>
+              Skills Laboratory
+              <span className="text-cyber-green font-mono">/&gt;</span>
+            </h2>
+          </motion.div>
           <motion.p variants={itemVariants} className="text-xl text-text-muted max-w-3xl mx-auto">
             An interactive showcase of technical skills. Click any item to expand and view a relevant code snippet.
           </motion.p>
@@ -534,12 +534,12 @@ const SkillsLaboratory = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={containerVariants}
-          className="space-y-3"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
         >
           {skills.map((skill) => {
             const isActive = activeSkill === skill.id;
             return (
-              <motion.div key={skill.id} variants={itemVariants} className="bg-dark-surface/50 rounded-lg border border-primary/20 shadow-md">
+              <motion.div key={skill.id} variants={itemVariants} className="bg-dark-surface/50 rounded-lg border border-primary/20 shadow-md hover:border-primary/40 transition-all duration-300 hover:shadow-medium h-full flex flex-col">
                 <div
                   onClick={() => setActiveSkill(isActive ? null : skill.id)}
                   className="p-4 cursor-pointer"
@@ -551,8 +551,8 @@ const SkillsLaboratory = () => {
                         <Icon name={skill.icon} size={20} className="text-white" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-gray-100">{skill.name}</h3>
-                        <div className="text-sm text-gray-400">{skill.level}% Proficiency</div>
+                        <h3 className="text-lg font-semibold text-text-light">{skill.name}</h3>
+                        <div className="text-sm text-text-muted">{skill.level}% Proficiency</div>
                       </div>
                     </div>
                     <motion.div animate={{ rotate: isActive ? 180 : 0 }} transition={{ duration: 0.3 }}>
@@ -561,7 +561,7 @@ const SkillsLaboratory = () => {
                   </div>
 
                   {/* Progress Bar */}
-                  <div className="w-full bg-gray-700 rounded-full h-1.5 mt-4">
+                  <div className="w-full bg-dark-bg rounded-full h-1.5 mt-4">
                     <motion.div
                       className={`h-1.5 rounded-full bg-gradient-to-r ${skill.color}`}
                       initial={{ width: 0 }}
@@ -573,9 +573,9 @@ const SkillsLaboratory = () => {
                   {/* Skill Tags */}
                   <div className="flex flex-wrap gap-2 mt-4">
                     {skill.tags.map(tag => (
-                        <span key={tag} className="px-2 py-1 bg-gray-700 rounded text-xs text-gray-300 font-mono">
-                            {tag}
-                        </span>
+                      <span key={tag} className="px-2.5 py-1 bg-primary/10 border border-primary/20 text-primary rounded-full text-xs font-mono">
+                        {tag}
+                      </span>
                     ))}
                   </div>
 

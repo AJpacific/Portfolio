@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Icon from '../AppIcon';
+import Image from '../AppImage';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,11 +50,11 @@ const Header = () => {
             onClick={closeMenu}
           >
             <div className="relative">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center group-hover:shadow-cyber transition-all duration-300">
-                <Icon 
-                  name="Shield" 
-                  size={20} 
-                  className="text-white group-hover:scale-110 transition-transform duration-300" 
+              <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-primary group-hover:shadow-cyber transition-all duration-300">
+                <Image
+                  src="/Portfolio/assets/images/pfp.jpg"
+                  alt="Ashutosh Jha"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <div className="absolute -top-1 -right-1 w-3 h-3 bg-cyber-green rounded-full animate-pulse"></div>

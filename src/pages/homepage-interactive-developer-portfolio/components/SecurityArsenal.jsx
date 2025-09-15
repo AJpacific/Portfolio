@@ -118,13 +118,13 @@ const SecurityArsenal = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={containerVariants}
-        className="text-center mb-16"
+        className="text-center mb-12"
       >
         <motion.div variants={itemVariants}>
           <h2 className="text-4xl md:text-5xl font-bold text-text-light mb-6">

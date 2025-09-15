@@ -122,14 +122,14 @@ const ProjectShowcase = () => {
     : projects.filter(p => p.category === activeCategory);
 
   return (
-    <div className="max-w-7xl mx-auto px-4">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Title */}
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={containerVariants}
-        className="text-center mb-10"
+        className="text-center mb-12"
       >
         <motion.div variants={itemVariants}>
         <h2 className="text-4xl md:text-5xl font-bold text-text-light mb-6">
@@ -173,7 +173,7 @@ const ProjectShowcase = () => {
           <motion.div
             key={project.id}
             variants={itemVariants}
-            className="bg-dark-surface/50 rounded-lg p-6 border border-primary/20"
+            className="bg-dark-surface/50 rounded-lg p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-medium"
           >
             <div className="flex items-center space-x-3 mb-3">
               <div className="w-3 h-3 bg-cyber-green rounded-full animate-pulse"></div>
