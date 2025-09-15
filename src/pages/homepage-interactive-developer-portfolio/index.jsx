@@ -7,6 +7,7 @@ import HeroSection from './components/HeroSection';
 import SkillsLaboratory from './components/SkillsLaboratory';
 import ProjectShowcase from './components/ProjectShowcase';
 import SecurityArsenal from './components/SecurityArsenal';
+import Achievements from './components/Achievements';
 
 const HomepageInteractiveDeveloperPortfolio = () => {
   const [activeSection, setActiveSection] = useState('hero');
@@ -18,6 +19,7 @@ const HomepageInteractiveDeveloperPortfolio = () => {
     { id: 'skills', name: 'Skills', icon: 'Code' },
     { id: 'projects', name: 'Projects', icon: 'FolderOpen' },
     { id: 'security', name: 'Security', icon: 'Shield' },
+    { id: 'achievements', name: 'Achievements', icon: 'Trophy' },
   ];
 
   useEffect(() => {
@@ -106,6 +108,11 @@ const HomepageInteractiveDeveloperPortfolio = () => {
       {/* Security Arsenal */}
       <section id="security" className="relative py-20">
         <SecurityArsenal />
+      </section>
+
+      {/* Achievements */}
+      <section id="achievements" className="relative py-20 bg-dark-surface/30">
+        <Achievements />
       </section>
 
       {/* Call to Action Footer */}
