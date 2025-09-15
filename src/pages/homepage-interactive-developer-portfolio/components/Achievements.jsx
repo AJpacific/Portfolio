@@ -71,7 +71,7 @@ const Achievements = () => {
               <Icon name="Trophy" size={24} className="text-cyber-green" />
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-text-light">2nd Place - Lumen Quest Hackathon 2026</h3>
+              <h3 className="text-2xl font-bold text-text-light">2nd Place - Lumen Quest 2026 Hackathon</h3>
               <span className="text-sm text-text-muted font-mono">Innovation • Team Project</span>
             </div>
           </div>
