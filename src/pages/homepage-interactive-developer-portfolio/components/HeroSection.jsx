@@ -127,7 +127,7 @@ const HeroSection = () => {
             className="grid grid-cols-3 gap-4 mt-8"
           >
             <div className="bg-dark-surface/50 rounded-lg p-4 text-center border border-primary/10">
-              <div className="text-2xl font-bold text-cyber-green font-mono">5+</div>
+              <div className="text-2xl font-bold text-cyber-green font-mono">7+</div>
               <div className="text-text-muted text-sm">Projects</div>
             </div>
             <div className="bg-dark-surface/50 rounded-lg p-4 text-center border border-primary/10">
@@ -153,7 +153,7 @@ const HeroSection = () => {
             <div className="relative">
               <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-primary shadow-cyber">
                 <Image
-                  src="public/assets/images/pfp-modified.png"
+                  src="/Portfolio/assets/images/pfp-modified.png"
                   alt="Ashutosh Jha"
                   className="w-full h-full object-cover"
                 />
