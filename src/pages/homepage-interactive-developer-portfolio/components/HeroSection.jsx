@@ -53,7 +53,7 @@ const HeroSection = () => {
     <div className="bg-[#27313e] min-h-screen flex items-center justify-center relative overflow-hidden pt-24 pb-16">
       {/* Background Grid */}
       <div className="absolute inset-0 bg-grid-pattern opacity-5 z-[-1]"></div>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
         {/* Left Column - Terminal */}
         <motion.div
@@ -110,7 +110,7 @@ const HeroSection = () => {
                   <span className="animate-pulse text-cyber-green">|</span>
                 </div>
               </motion.div>
-              
+
               {/* Current Command Line */}
               <div className="text-cyber-green">
                 <span className="text-text-muted">ashutosh@portfolio:~$</span>
@@ -153,7 +153,7 @@ const HeroSection = () => {
             <div className="relative">
               <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-primary shadow-cyber">
                 <Image
-                  src="/Portfolio/assets/images/pfp.jpg"
+                  src="public/assets/images/pfp-modified.png"
                   alt="Ashutosh Jha"
                   className="w-full h-full object-cover"
                 />
@@ -177,7 +177,7 @@ const HeroSection = () => {
               <span className="text-cyber-green font-mono">/&gt;</span>
             </h1>
             <h2 className="text-xl md:text-2xl text-text-muted mb-6 font-mono">
-            Backend | Cybersecurity
+              Backend | Cybersecurity
             </h2>
           </motion.div>
 
@@ -188,7 +188,7 @@ const HeroSection = () => {
             transition={{ delay: 0.8 }}
             className="text-lg text-text-muted mb-8 max-w-lg mx-auto lg:mx-0"
           >
-            Crafting secure, scalable applications where innovative code meets cybersecurity excellence. 
+            Crafting secure, scalable applications where innovative code meets cybersecurity excellence.
             Bridging the gap between creative development and digital protection.
           </motion.p>
 

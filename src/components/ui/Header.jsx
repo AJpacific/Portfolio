@@ -34,25 +34,24 @@ const Header = () => {
   };
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'backdrop-cyber bg-dark-bg/90 shadow-medium' 
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+          ? 'backdrop-cyber bg-dark-bg/90 shadow-medium'
           : 'bg-dark-bg/80'
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link 
-            to="/homepage-interactive-developer-portfolio" 
+          <Link
+            to="/homepage-interactive-developer-portfolio"
             className="flex items-center space-x-3 group"
             onClick={closeMenu}
           >
             <div className="relative">
               <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-primary group-hover:shadow-cyber transition-all duration-300">
                 <Image
-                  src="/Portfolio/assets/images/pfp.jpg"
+                  src="public/assets/images/pfp-modified.png"
                   alt="Ashutosh Jha"
                   className="w-full h-full object-cover"
                 />
@@ -64,7 +63,7 @@ const Header = () => {
                 <span className="text-cyber-green">&gt;</span> Ashutosh Jha
               </div>
               <div className="text-text-muted text-xs font-mono">
-              Backend | Cybersecurity
+                Backend | Cybersecurity
               </div>
             </div>
           </Link>
@@ -75,19 +74,17 @@ const Header = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`relative px-4 py-2 rounded-lg font-mono text-sm transition-all duration-300 group ${
-                  isActivePath(item.path)
+                className={`relative px-4 py-2 rounded-lg font-mono text-sm transition-all duration-300 group ${isActivePath(item.path)
                     ? 'text-cyber-green bg-primary/20 shadow-glow'
                     : 'text-text-light hover:text-cyber-green hover:bg-primary/10'
-                }`}
+                  }`}
               >
                 <div className="flex items-center space-x-2">
-                  <Icon 
-                    name={item.icon} 
-                    size={16} 
-                    className={`transition-colors duration-300 ${
-                      isActivePath(item.path) ? 'text-cyber-green' : 'group-hover:text-cyber-green'
-                    }`}
+                  <Icon
+                    name={item.icon}
+                    size={16}
+                    className={`transition-colors duration-300 ${isActivePath(item.path) ? 'text-cyber-green' : 'group-hover:text-cyber-green'
+                      }`}
                   />
                   <span>{item.name}</span>
                 </div>
@@ -120,36 +117,33 @@ const Header = () => {
             className="lg:hidden p-2 rounded-lg text-text-light hover:text-cyber-green hover:bg-primary/10 transition-all duration-300"
             aria-label="Toggle menu"
           >
-            <Icon 
-              name={isMenuOpen ? "X" : "Menu"} 
-              size={24} 
+            <Icon
+              name={isMenuOpen ? "X" : "Menu"}
+              size={24}
               className="transition-transform duration-300"
             />
           </button>
         </div>
 
         {/* Mobile Navigation */}
-        <div className={`lg:hidden transition-all duration-300 overflow-hidden ${
-          isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-        }`}>
+        <div className={`lg:hidden transition-all duration-300 overflow-hidden ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          }`}>
           <nav className="py-4 space-y-2 border-t border-primary/20">
             {navigationItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
                 onClick={closeMenu}
-                className={`flex items-center space-x-3 px-4 py-3 rounded-lg font-mono text-sm transition-all duration-300 ${
-                  isActivePath(item.path)
+                className={`flex items-center space-x-3 px-4 py-3 rounded-lg font-mono text-sm transition-all duration-300 ${isActivePath(item.path)
                     ? 'text-cyber-green bg-primary/20 shadow-glow'
                     : 'text-text-light hover:text-cyber-green hover:bg-primary/10'
-                }`}
-              >
-                <Icon 
-                  name={item.icon} 
-                  size={18} 
-                  className={`transition-colors duration-300 ${
-                    isActivePath(item.path) ? 'text-cyber-green' : ''
                   }`}
+              >
+                <Icon
+                  name={item.icon}
+                  size={18}
+                  className={`transition-colors duration-300 ${isActivePath(item.path) ? 'text-cyber-green' : ''
+                    }`}
                 />
                 <span>{item.name}</span>
                 {isActivePath(item.path) && (
@@ -157,7 +151,7 @@ const Header = () => {
                 )}
               </Link>
             ))}
-            
+
             {/* Mobile CTA */}
             <div className="pt-4 border-t border-primary/20">
               <a

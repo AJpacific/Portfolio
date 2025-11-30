@@ -63,6 +63,37 @@ const ProjectShowcase = () => {
       githubUrl: "https://github.com/AJpacific/LMS-Backend"
     },
     {
+      id: 6,
+      title: "Real-Time Chat Backend",
+      category: "Backend Development",
+      description: `A robust, scalable, and secure backend infrastructure designed for modern real-time messaging applications. Built with Spring Boot 4.0 and Java 21, this system delivers low-latency communication through WebSocket (STOMP over SockJS) for bi-directional, event-driven communication. Features include JWT-based authentication, RESTful APIs for resource management, real-time message delivery, and reliable PostgreSQL data persistence with connection pooling via HikariCP.`,
+      technologies: [
+        "Spring Boot 4.0",
+        "Java 21",
+        "WebSocket",
+        "STOMP",
+        "SockJS",
+        "PostgreSQL",
+        "Spring Security",
+        "JWT (JJWT 0.13.0)",
+        "Spring Data JPA",
+        "Hibernate",
+        "HikariCP",
+        "Maven",
+        "H2 Database (Testing)"
+      ],
+      securityFeatures: [
+        "JWT Authentication (Stateless)",
+        "WebSocket Security",
+        "Connection Pooling (HikariCP)",
+        "ACID Compliance",
+        "Asynchronous Processing",
+        "Horizontal Scalability",
+        "Virtual Threads Ready (Java 21)"
+      ],
+      githubUrl: "https://github.com/AJpacific/chat-app-backend"
+    },
+    {
       id: 3,
       title: "Network Vulnerability Scanner",
       category: "Cybersecurity",
@@ -102,7 +133,32 @@ const ProjectShowcase = () => {
       technologies: ["JavaScript", "HTML", "CSS"],
       securityFeatures: ["HTTPS", "Form Validation", "Input Sanitization", "Secure Storage (Local/Session)"],
       githubUrl: "https://github.com/AJpacific/HomeBite",
-    }  
+    },
+    {
+      id: 7,
+      title: "Rigveda Digital Explorer",
+      category: "Frontend Development",
+      description: `A modern, responsive web application for exploring, searching, and studying the ancient texts of the Rigveda. This application provides a user-friendly interface to delve into the 10 Mandalas, 1,028 Suktas, and 10,552 verses of this foundational Vedic Sanskrit text. Features include hierarchical navigation, universal search across all verses, random verse discovery, an in-built Sanskrit dictionary, and an integrated AI assistant for deeper insights.`,
+      technologies: [
+        "Next.js (App Router)",
+        "TypeScript",
+        "React",
+        "Tailwind CSS",
+        "ESLint",
+        "API Routes",
+        "AI Integration",
+        "JSON Data Processing"
+      ],
+      securityFeatures: [
+        "Server-Side Rendering (SSR)",
+        "API Route Protection",
+        "Input Sanitization",
+        "Responsive Design",
+        "SEO Optimized"
+      ],
+      githubUrl: "https://github.com/AJpacific/rigveda",
+      liveUrl: "https://rigveda-snh2.vercel.app/"
+    }
   ];
 
   const categories = ["All", ...new Set(projects.map(p => p.category))];
@@ -132,7 +188,7 @@ const ProjectShowcase = () => {
         className="text-center mb-12"
       >
         <motion.div variants={itemVariants}>
-        <h2 className="text-4xl md:text-5xl font-bold text-text-light mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-text-light mb-6">
             <span className="text-cyber-green font-mono">&lt;</span>
             Project Showcase
             <span className="text-cyber-green font-mono">/&gt;</span>
@@ -145,22 +201,21 @@ const ProjectShowcase = () => {
 
       {/* Category Filter */}
       <div className="flex justify-center mb-8">
-  <div className="flex flex-wrap justify-center space-x-2 bg-dark-surface/50 rounded-lg p-2 border border-primary/20 w-full">
-    {categories.map(cat => (
-      <button
-        key={cat}
-        onClick={() => setActiveCategory(cat)}
-        className={`px-4 py-2 rounded-lg font-mono text-sm transition-all duration-300 ${
-          activeCategory === cat
-            ? 'bg-primary text-white shadow-cyber'
-            : 'text-text-muted hover:text-cyber-green hover:bg-primary/10'
-        }`}
-      >
-        {cat}
-      </button>
-    ))}
-  </div>
-</div>
+        <div className="flex flex-wrap justify-center space-x-2 bg-dark-surface/50 rounded-lg p-2 border border-primary/20 w-full">
+          {categories.map(cat => (
+            <button
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              className={`px-4 py-2 rounded-lg font-mono text-sm transition-all duration-300 ${activeCategory === cat
+                ? 'bg-primary text-white shadow-cyber'
+                : 'text-text-muted hover:text-cyber-green hover:bg-primary/10'
+                }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+      </div>
 
       {/* Projects Grid */}
       <motion.div
@@ -213,16 +268,29 @@ const ProjectShowcase = () => {
               ))}
             </ul>
 
-            {/* GitHub Link */}
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 bg-dark-surface border border-primary/20 text-text-light px-6 py-2 rounded-lg font-mono hover:bg-primary/10 hover:border-primary/40 transition-all duration-300"
-            >
-              <Icon name="Github" size={20} />
-              <span>View Code</span>
-            </a>
+            {/* Links */}
+            <div className="flex flex-wrap gap-3">
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-2 bg-dark-surface border border-primary/20 text-text-light px-6 py-2 rounded-lg font-mono hover:bg-primary/10 hover:border-primary/40 transition-all duration-300"
+              >
+                <Icon name="Github" size={20} />
+                <span>View Code</span>
+              </a>
+              {project.liveUrl && (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 bg-primary border border-primary text-white px-6 py-2 rounded-lg font-mono hover:bg-primary/80 transition-all duration-300 shadow-cyber"
+                >
+                  <Icon name="ExternalLink" size={20} />
+                  <span>Live Demo</span>
+                </a>
+              )}
+            </div>
           </motion.div>
         ))}
       </motion.div>
