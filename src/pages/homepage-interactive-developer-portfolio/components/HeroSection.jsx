@@ -206,46 +206,51 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2 }}
-            className="flex justify-center lg:justify-start space-x-6 mt-4"
+            className="flex flex-wrap justify-center lg:justify-start gap-6 mt-6"
           >
             <a
               href="https://github.com/AJpacific"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-text-muted hover:text-cyber-green transition-colors duration-300"
+              className="flex items-center space-x-2 text-text-muted hover:text-cyber-green transition-colors duration-300 group"
             >
-              <Icon name="Github" size={24} />
+              <Icon name="Github" size={22} className="group-hover:scale-110 transition-transform" />
+              <span className="font-mono">GitHub</span>
             </a>
             <a
               href="http://www.linkedin.com/in/ajpacific"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-text-muted hover:text-cyber-green transition-colors duration-300"
+              className="flex items-center space-x-2 text-text-muted hover:text-cyber-green transition-colors duration-300 group"
             >
-              <Icon name="Linkedin" size={24} />
+              <Icon name="Linkedin" size={22} className="group-hover:scale-110 transition-transform" />
+              <span className="font-mono">LinkedIn</span>
             </a>
             <a
               href="https://leetcode.com/u/AJpacific/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-text-muted hover:text-cyber-green transition-colors duration-300"
+              className="flex items-center space-x-2 text-text-muted hover:text-cyber-green transition-colors duration-300 group"
             >
-              <Icon name="Code" size={24} />
+              <Icon name="Code" size={22} className="group-hover:scale-110 transition-transform" />
+              <span className="font-mono">LeetCode</span>
             </a>
             <a
               href="mailto:aj4ashutoshjha@gmail.com"
-              className="text-text-muted hover:text-cyber-green transition-colors duration-300"
+              className="flex items-center space-x-2 text-text-muted hover:text-cyber-green transition-colors duration-300 group"
             >
-              <Icon name="Mail" size={24} />
+              <Icon name="Mail" size={22} className="group-hover:scale-110 transition-transform" />
+              <span className="font-mono">Email</span>
             </a>
             <a
               href="/Portfolio/assets/images/Ashutosh_Jha_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-text-muted hover:text-cyber-green transition-colors duration-300"
+              className="flex items-center space-x-2 text-text-muted hover:text-cyber-green transition-colors duration-300 group"
               title="Download Resume"
             >
-              <Icon name="FileText" size={24} />
+              <Icon name="FileText" size={22} className="group-hover:scale-110 transition-transform" />
+              <span className="font-mono">Resume</span>
             </a>
           </motion.div>
         </motion.div>
