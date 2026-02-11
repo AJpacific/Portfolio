@@ -63,6 +63,27 @@ const ProjectShowcase = () => {
       githubUrl: "https://github.com/AJpacific/LMS-Backend"
     },
     {
+      id: 8,
+      title: "API Rate Limiter",
+      category: "Backend Development",
+      description: `A production-grade, distributed API rate limiter built with Spring Boot and Redis. It implements two industry-standard algorithms — Sliding Window Log and Token Bucket — selectable per-endpoint via a simple annotation, with full atomicity guaranteed through Redis Lua scripting.`,
+      technologies: [
+        "Java 21",
+        "Spring Boot",
+        "Redis",
+        "Lua",
+        "Docker Compose",
+        "Spring AOP"
+      ],
+      securityFeatures: [
+        "Distributed State Management",
+        "Atomic Operations (Lua)",
+        "Fail-Safe Design",
+        "Rate Limiting Headers"
+      ],
+      githubUrl: "https://github.com/AJpacific/api-rate-limiter"
+    },
+    {
       id: 6,
       title: "Real-Time Chat Backend",
       category: "Backend Development",

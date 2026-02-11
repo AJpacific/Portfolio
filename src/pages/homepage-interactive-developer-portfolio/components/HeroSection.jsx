@@ -238,6 +238,15 @@ const HeroSection = () => {
             >
               <Icon name="Mail" size={24} />
             </a>
+            <a
+              href="/Portfolio/assets/images/Ashutosh_Jha_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-text-muted hover:text-cyber-green transition-colors duration-300"
+              title="Download Resume"
+            >
+              <Icon name="FileText" size={24} />
+            </a>
           </motion.div>
         </motion.div>
       </div>
